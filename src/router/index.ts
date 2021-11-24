@@ -4,7 +4,7 @@ const constantRoutes: Array<RouteRecordRaw> = [
   {
     name: 'index',
     path: '',
-    component: () => import('~comp/HelloWorld.vue')
+    component: () => import('~view/Login/index.vue')
   }
 ]
 
