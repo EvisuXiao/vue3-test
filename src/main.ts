@@ -4,9 +4,9 @@ import router from './router'
 
 // import "~/styles/element/index.scss";
 
-// import ElementPlus from "element-plus";
+import ElementPlus from 'element-plus'
 // import all element css, uncommented next line
-// import "element-plus/dist/index.css";
+import 'element-plus/dist/index.css'
 
 // or use cdn, uncomment cdn link in `index.html`
 
@@ -15,6 +15,8 @@ import '~/styles/index.scss'
 // If you want to use ElMessage, import it.
 import 'element-plus/theme-chalk/src/message.scss'
 
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+
 const app = createApp(App)
 // app.use(ElementPlus);
-app.use(router).mount('#app')
+app.use(ElementPlus, { locale: zhCn }).use(router).mount('#app')

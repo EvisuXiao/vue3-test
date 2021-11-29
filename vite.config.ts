@@ -11,6 +11,7 @@ export default defineConfig({
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
       '~comp/': `${path.resolve(__dirname, 'src')}/components/`,
+      '~types/': `${path.resolve(__dirname, 'src')}/types/`,
       '~view/': `${path.resolve(__dirname, 'src')}/views/`
     }
   },
@@ -20,6 +21,9 @@ export default defineConfig({
         additionalData: '@use "~/styles/element/index.scss" as *;'
       }
     }
+  },
+  optimizeDeps: {
+    include: ['lodash']
   },
   plugins: [
     vue(),
