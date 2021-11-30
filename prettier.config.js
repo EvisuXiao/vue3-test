@@ -10,10 +10,10 @@ module.exports = {
   trailingComma: 'none', // 未尾分号
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
-  arrowParens: 'always',
+  arrowParens: 'avoid',
   insertPragma: false,
   requirePragma: false,
-  proseWrap: 'never',
-  htmlWhitespaceSensitivity: 'strict',
-  endOfLine: 'lf'
+  proseWrap: 'preserve',
+  htmlWhitespaceSensitivity: 'css',
+  endOfLine: 'auto'
 }
