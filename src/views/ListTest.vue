@@ -1,26 +1,50 @@
 <template>
-  <x-list :column-title="title" :table-tools="tool" :get-data="getData"></x-list>
+  <x-list :column-title="title" :table-tools="tool" :row-tools="tool2" :get-data="getData"></x-list>
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { Ref, ref } from 'vue'
   import { Share } from '@element-plus/icons'
-  import XList from '~comp/List/BaseList.vue'
+  import XList from '~comp/List/index.vue'
+  import { RowToolBtn, TableToolBtn } from '~types/components/list'
 
-  const title = ref({
+  const title = {
     id: 'ID',
     name: '名称'
-  })
+  }
 
-  const tool = ref([
+  const tool: TableToolBtn[] = [
     {
       label: '啦啦啦',
-      // icon: Share,
+      icon: Share,
       handler: () => {
-        console.log('11111')
+        console.log(111)
+      }
+    },
+    {
+      label: '啦啦啦',
+      icon: Share,
+      handler: () => {
+        console.log('22222')
       }
     }
-  ])
+  ]
+  const tool2: RowToolBtn[] = [
+    {
+      label: '啦啦啦',
+      icon: Share,
+      handler: row => {
+        console.log(row)
+      }
+    },
+    {
+      label: '啦啦啦',
+      icon: Share,
+      handler: row => {
+        console.log(row)
+      }
+    }
+  ]
   const getData = () => {
     return new Promise(resolve => {
       const res = [

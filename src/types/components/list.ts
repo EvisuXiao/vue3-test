@@ -1,3 +1,5 @@
+import { Component } from 'vue'
+
 export interface ServerSideOption {
   enabled?: boolean
   dataKey?: string
@@ -6,7 +8,7 @@ export interface ServerSideOption {
 
 interface ToolBtn {
   label: string
-  icon?: string
+  icon?: Component
 }
 
 export interface TableToolBtn extends ToolBtn {

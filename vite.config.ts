@@ -15,13 +15,6 @@ export default defineConfig({
       '~view/': `${path.resolve(__dirname, 'src')}/views/`
     }
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@use "~/styles/element/index.scss" as *;'
-      }
-    }
-  },
   optimizeDeps: {
     include: ['lodash']
   },
